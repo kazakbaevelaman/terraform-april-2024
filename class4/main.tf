@@ -5,6 +5,7 @@ provider "aws" {
 resource "aws_instance" "web" {
   ami           = var.ami_id
   instance_type = var.instance_type
+  availability_zone = var.kaizen
 }
 
 # variables 
@@ -25,5 +26,8 @@ variable "region" {
   description = "Provide region"
   type        = string
   default     = ""
+}
+
+variable "kaizen" {
 }
 
